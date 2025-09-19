@@ -150,10 +150,12 @@
 			},
 
 			rename: {
-				moveResponsiveCss: {
-					src: 'deploy/app/css/storymaps/' + APP_NAME + '/ui/Responsive.css',
-					dest: 'deploy/app/Responsive.css'
-				}
+        main: {
+          files: [
+            {src: ['deploy/app/css/storymaps/' + APP_NAME + '/ui/Responsive.css'],
+            dest: 'deploy/app/Responsive.css'}
+          ]
+        }
 			},
 
 			"regex-replace": {
@@ -209,7 +211,7 @@
 		grunt.loadNpmTasks('grunt-contrib-copy');
 		grunt.loadNpmTasks('grunt-contrib-cssmin');
 		grunt.loadNpmTasks('grunt-regex-replace');
-		grunt.loadNpmTasks('grunt-rename');
+		grunt.loadNpmTasks('grunt-contrib-rename');
 		grunt.loadNpmTasks('grunt-contrib-jshint');
 
 		grunt.registerTask('test', ['jshint']);
@@ -244,7 +246,7 @@
 			 * - perform resources path replacement
 			 */
 			'copy:css',
-			'rename:moveResponsiveCss',
+			'rename:main',
 			'cssmin',
 			'concat:css',
 			'regex-replace:css',

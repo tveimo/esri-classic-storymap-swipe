@@ -43,14 +43,14 @@
 				// Web map id and application id can be dynamically specified through url parameters (webmap and appid)
 				// if the authorizedOwners property is specified (see below).
 				// If an application id is specified, the webmap configuration isn't used.
-				appid: "6f9e7e051c6c43ea93a01a2acfec4c56",
+				appid: "",
 				//----------------------------------
 				// Swipe Layer
 				//----------------------------------
 				// Choose to swipe between two webmaps or between the layer of a single webmap
 				// can be overridden by using webmap= in URL
 				// e.g: ["WEBMAP_ID"] OR ["WEBMAP_ID_1", "WEBMAP_ID_2"]
-				webmaps: ["62702544d70648e593bc05d65180fd64"],
+				webmaps: [""],
 				// If using one webmap, enter the layer index of the layer to be revealed.
 				// Index is defined by the web map table of contents (0 is the top layer).
 				layerIndex: 1,
@@ -131,7 +131,7 @@
 				// whose webmaps are allowed to be viewed by this Swipe deployment
 				// This is the ArcGIS Online username of the webmap owner (e.g. ["user1"], ["user1", "user2"])
 				// To authorize all users you can use ["*"]
-				authorizedOwners: [""]
+				authorizedOwners: ["*"]
 				//
 			};
 			// Optionally sharing and proxy URLs can be configured in app/swipe-config.js. This is only required
@@ -966,4 +966,5 @@
 		</script>
 	</body>
 </html>
+
 
